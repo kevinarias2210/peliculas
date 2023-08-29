@@ -1,0 +1,19 @@
+{
+  "name": "peliculas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinarias2210/peliculas.git"
+  },
+  "author": "Kevin Arias",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kevinarias2210/peliculas/issues"
+  },
+  "homepage": "https://github.com/kevinarias2210/peliculas#readme"
+}

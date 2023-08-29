@@ -1,0 +1,1 @@
+console.log('API URL = https://asjdnas.com/saljkdn?api_key=' + API_KEY);
