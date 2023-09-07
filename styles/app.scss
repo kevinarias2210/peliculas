@@ -1,0 +1,186 @@
+@import './generales.scss';
+
+.header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    &__img{
+        width: 25%;
+        margin: 15px;
+        
+        .header__img--logo{
+            width: 100px;
+            height: 100px;
+        }
+    }
+    
+    &__label{
+        width: 75%;
+        height: 14vh;
+        justify-content: center;
+        background-color: $color-primary;
+        @extend .header;
+        
+        .header__label--input{
+            width: 50%;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+        
+        .header__label--input::placeholder{
+            font-family: $font-parrafo;
+            font-weight: 100;
+            color: $grey;
+            text-align: center;
+        }
+        
+        .header__label--m{
+            margin: 12px;
+            
+            .header__m--menu{
+                width: 30px;
+                height: 33px;
+            }
+        }
+    }
+}
+
+.nav{
+    justify-content: flex-end;
+    @extend .header;
+    &__container{
+        display: grid;
+        grid-template-columns: 1fr 30px;
+        column-gap: 10px;
+        align-items: center;
+        margin-right: $margin-right-left;
+        padding: 3px;
+        background-color: $color-primary;
+
+        .nav__container--ul{
+            padding-left: 10px;
+            font-family: $font-parrafo;
+            font-weight: 300;
+            color: $white;
+        }
+
+        .nav__container--list{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            position: absolute;
+            margin-top: 5px;
+            top: 160px;
+            background-color: #eb1768cf;
+
+            .nav__container--a{
+                padding: 5px 15px 0 10px;
+                font-family: $font-parrafo;
+                font-weight: 100;
+                color: $white;
+            }
+            .nav__container--a:hover{
+                font-family: $font-parrafo;
+                font-weight: 400;
+                color: $black;
+                background-color: $white;
+            }
+        }
+
+        .active{
+            display: none; 
+        }
+        
+        .nav__container--img{
+            height: 20px;
+            position: static;
+        }
+    }
+}
+
+.section{
+    width: 100%;
+    margin-top: 20px;
+    &__container{
+        margin-bottom: 25px;
+        .section__container--subtitle{
+            margin-left: $margin-right-left;
+            margin-right: $margin-right-left;
+            border-bottom: 5px solid $color-terciario;
+            .section__container--h2{
+                padding-bottom: 5px;
+                font-family: $font-subtitle;
+                font-weight: 500;
+                font-size: $font-wSubtitle;
+                color: $color-secundario;
+            }
+        }
+        .section__container--see{
+            display: flex;
+            justify-content: flex-end;
+            margin: 12px $margin-right-left;
+            .section__container--ver{
+                font-family: $font-parrafo;
+                font-size: $font-wParrafo;
+                text-decoration: none;
+                color: $black;
+            }
+            .section__container--ver:hover{
+                text-decoration: underline;
+            }
+        }
+
+        .section__container--peliculas{
+            max-height: 300px;
+            display: flex ;
+            overflow-x: scroll;
+            column-gap: 15px;
+            margin: 0 $margin-right-left;
+            .section__container--movie{
+                min-width: 200px;
+                height: 300px;
+                line-height: 110px;
+                background-color: aqua;
+            }
+        }
+    }
+}
+
+.footer{
+    width: 100%;
+    display: flex;
+    &__container{
+        width: 75%;
+        height: 14vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-primary;
+        .footer__container--h3{
+            width: 80%;
+            font-family: $font-title;
+            font-size: $font-wSubtitle;
+            color: $white;
+        }
+    }
+    .footer__logo{
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 5px 5px 5px;
+        background-color: $white;
+        .footer__logo--p{
+            font-family: $font-parrafo;
+            font-size: 14px;
+        }
+        .footer__logo--icon{
+            width: 80%;
+            margin: 5px;
+        }
+    }
+}

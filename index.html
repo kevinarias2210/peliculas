@@ -3,11 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/app.css">
-    <title>Consumo de API de Pelicuas</title>
+    <title>API de Peliculas</title>
 </head>
 <body>
-    <header>Consumiendo API con AXIOS</header>
+    <header id="header" class="header">
+        <div class="header__img">
+            <img class="header__img--logo" src="./src/img/EYE_FILM.svg" alt="logo">
+        </div>
+        <div class="header__label">
+            <form action="">
+                <input class="header__label--input" type="text" placeholder="Buscar Peliculas">
+            </form>
+            <div class="header__label--m">
+                <img class="header__m--menu" src="./src/img/menu.png" alt="menu">
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="nav__container">
+            <p class="nav__container--ul">Categorías</p>
+            <img class="nav__container--img" src="./src/img/arrow.png" alt="arrow">
+            <div class="nav__container--list active">
+                <a class="nav__container--a" href="">Acción</a>
+                <a class="nav__container--a" href="">Ciencia Ficción</a>
+                <a class="nav__container--a" href="">Fantasía</a>
+                <a class="nav__container--a" href="">Misterio</a>
+                <a class="nav__container--a" href="">Suspenso</a>
+                <a class="nav__container--a" href="">Comedia</a>
+                <a class="nav__container--a" href="">Drama</a>
+                <a class="nav__container--a" href="">Terror</a>
+                <a class="nav__container--a" href="">Romance</a>
+                <a class="nav__container--a" href="">Documental</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="section__container">
+            <div class="section__container--subtitle">
+                <h2 class="section__container--h2">Estrenos:</h2>
+            </div>
+            <div class="section__container--see">
+                <a class="section__container--ver" href="">Ver más</a>
+            </div>
+            <div id="estrenos" class="section__container--peliculas">
+                <div class="section__container--movie"></div>
+                <div class="section__container--movie"></div>
+            </div>
+        </div>
+
+        <div class="section__container">
+            <div class="section__container--subtitle">
+                <h2 class="section__container--h2">Tendencias:</h2>
+            </div>
+            <div class="section__container--see">
+                <a class="section__container--ver" href="">Ver más</a>
+            </div>
+            <div id="tendencia" class="section__container--peliculas">
+                <!-- <div class="section__container--movie"></div>
+                <div class="section__container--movie"></div> -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <h3 class="footer__container--h3">Derechos de autor reservados al dueño de la API The movieDB</h3>
+        </div>
+        <div class="footer__logo">
+            <p class="footer__logo--p">Diseñado por:</p>
+            <img class="footer__logo--icon" src="./src/img/logo.png" alt="logo arming code">
+        </div>
+    </footer>
 </body>
 <script src="./src/secrets.js"></script>
 <script src="./src/index.js"></script>

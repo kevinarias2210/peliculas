@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/kevinarias2210/peliculas/issues"
   },
-  "homepage": "https://github.com/kevinarias2210/peliculas#readme"
+  "homepage": "https://github.com/kevinarias2210/peliculas#readme",
+  "dependencies": {
+    "sass": "^1.66.1"
+  }
 }
