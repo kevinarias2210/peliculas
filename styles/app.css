@@ -54,12 +54,12 @@
   justify-content: flex-end;
 }
 .nav__container {
+  margin-right: 15px;
   display: grid;
   grid-template-columns: 1fr 30px;
   -moz-column-gap: 10px;
        column-gap: 10px;
   align-items: center;
-  margin-right: 15px;
   padding: 3px;
   background-color: #EB1768;
 }
@@ -70,11 +70,11 @@
   color: white;
 }
 .nav__container .nav__container--list {
+  margin-top: 5px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   position: absolute;
-  margin-top: 5px;
   top: 160px;
   background-color: rgba(235, 23, 104, 0.8117647059);
 }
@@ -98,7 +98,28 @@
   position: static;
 }
 
-.section {
+.navArrow {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.navArrow .navArrow__back {
+  width: 50px;
+  height: 50px;
+}
+.navArrow .navArrow__gender {
+  margin-left: 15px;
+  font-family: "Hind", sans-serif;
+  font-size: 22px;
+  color: #17C4EB;
+}
+
+/* .inactive{
+    display: none;
+} */
+.section, .section2 {
   width: 100%;
   margin-top: 20px;
 }
@@ -118,9 +139,9 @@
   color: #17C4EB;
 }
 .section__container .section__container--see {
+  margin: 12px 15px;
   display: flex;
   justify-content: flex-end;
-  margin: 12px 15px;
 }
 .section__container .section__container--see .section__container--ver {
   font-family: "Overpass", sans-serif;
@@ -133,17 +154,96 @@
 }
 .section__container .section__container--peliculas {
   max-height: 300px;
+  margin: 0 15px;
   display: flex;
   overflow-x: scroll;
   -moz-column-gap: 15px;
        column-gap: 15px;
-  margin: 0 15px;
 }
 .section__container .section__container--peliculas .section__container--movie {
   min-width: 200px;
   height: 300px;
   line-height: 110px;
-  background-color: aqua;
+}
+
+.section2__container {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.section2__container .section2__container--imagen {
+  margin-bottom: 25px;
+}
+.section2__container .section2__container--imagen .section2__container--imag {
+  width: 370px;
+  height: 370px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 6%;
+}
+.section2__container .section2__container--details {
+  margin-bottom: 15px;
+}
+.section2__container .section2__container--details .section2__container--title {
+  margin-bottom: 15px;
+}
+.section2__container .section2__container--details .section2__container--title .section2__container--titulo {
+  font-family: "Cabin", sans-serif;
+  font-size: 25px;
+}
+.section2__container .section2__container--details .section2__container--description .section2__container--sipnosis {
+  font-family: "Overpass", sans-serif;
+  font-weight: 200;
+}
+.section2__container .section2__container--subtitulo .section2__container--Subtitle {
+  border-bottom: 5px solid #EBD717;
+}
+.section2__container .section2__container--subtitulo .section2__container--Subtitle .section2__container--h2 {
+  padding-bottom: 5px;
+  font-family: "Cabin", sans-serif;
+  font-size: 18px;
+  color: #17C4EB;
+}
+.section2__container .section2__container--subtitulo .section2__container--puntos, .section2__container .section2__container--subtitulo .section2__container--categorias {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section2__container .section2__container--subtitulo .section2__container--puntos .section2__container--star, .section2__container .section2__container--subtitulo .section2__container--categorias .section2__container--star {
+  width: 40px;
+}
+.section2__container .section2__container--subtitulo .section2__container--puntos .section2__container--point, .section2__container .section2__container--subtitulo .section2__container--categorias .section2__container--point {
+  font-family: "Cabin", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: #EB1768;
+}
+.section2__container .section2__container--subtitulo .section2__container--categorias .section2__container--p {
+  margin: 0 10px 10px 0;
+  font-family: "Overpass", sans-serif;
+  font-style: italic;
+}
+
+.section3 {
+  width: 100%;
+}
+.section3 .section3__container {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  row-gap: 10px;
+}
+.section3 .section3__container .section3__container--img {
+  width: 182px;
+  height: 277px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .footer {

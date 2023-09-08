@@ -10,8 +10,24 @@ const API = axios.create({
     },
 });
 
+const movieEstrenos = document.querySelector('#estrenos');
 const movieContainer = document.querySelector('#tendencia');
 const navContainer = document.querySelector('#nav');
+
+async function getMovieNext(){
+    const { data } = await API('movie/upcoming');
+
+    const movieNext = data.results;
+    
+    movieNext.map(next => {
+        const movieNextImg = document.createElement('img');
+        movieNextImg.classList.add('section__container--movie');
+        movieNextImg.setAttribute('src', 'https://image.tmdb.org/t/p/w300/' + next.poster_path);
+        movieNextImg.setAttribute('alt', next.title);
+
+        movieEstrenos.appendChild(movieNextImg);
+    })
+}
 
 async function getTrendingMovie(){
     const { data } = await API('trending/movie/day');
@@ -25,7 +41,7 @@ async function getTrendingMovie(){
         const movieImg = document.createElement('img');
         movieImg.classList.add('section__container--movie');
         movieImg.setAttribute('src', 'https://image.tmdb.org/t/p/w300/' + movies.poster_path);
-        movieImg.setAttribute('alt', movies.titel);
+        movieImg.setAttribute('alt', movies.title);
 
         movieContainer.appendChild(movieImg);
     });

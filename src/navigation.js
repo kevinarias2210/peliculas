@@ -31,6 +31,7 @@ function homePage(){
     console.log('home!!');
     getTrendingMovie();
     getCategories();
+    getMovieNext();
 }
 
 function homeTrends(){
