@@ -16,6 +16,9 @@ async function getMovieNext(){
     const { data } = await API('movie/upcoming');
 
     const movieNext = data.results;
+
+    sectionEstrenos.innerHTML = '';/**Se llama al padre donde contiene todo lo que recorre para 
+    eliminarlo cuando se pide de nuevo y no cargue otra vez */
     
     movieNext.map(next => {
         const movieNextImg = document.createElement('img');
@@ -32,7 +35,7 @@ async function getTrendingMovie(){
 
     const movie = data.results;
 
-    /* console.log(movie); */
+    sectionTendencias.innerHTML = '';
     
     movie.forEach(movies => {
         /* console.log(movies); */
@@ -50,7 +53,7 @@ async function getCategories(){
 
     const categories = data.genres;
     
-    /* console.log(categories); */
+    navegator.innerHTML = '';
 
     categories.map(cate => {
         const enlaceCategories = document.createElement('a');

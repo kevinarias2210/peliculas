@@ -8,6 +8,7 @@ const headerLabelInput = document.querySelector('#headerLabelInput')
 /*Nav */
 
 const nav = document.querySelector('.nav');
+const navegator = document.querySelector('#nav');
 
 /*Nav Arrow */
 
