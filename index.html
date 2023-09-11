@@ -24,7 +24,7 @@
         </div>
         <div class="header__label">
             <form action="">
-                <input class="header__label--input" type="text" placeholder="Buscar Peliculas">
+                <input id="headerLabelInput" class="header__label--input" type="text" placeholder="Buscar Peliculas">
             </form>
             <div class="header__label--m">
                 <img class="header__m--menu" src="./src/img/menu.png" alt="menu">
@@ -32,7 +32,7 @@
         </div>
     </header>
 
-    <!-- <nav class="nav">
+    <nav class="nav">
         <div class="nav__container">
             <p class="nav__container--ul">Categorías</p>
             <img class="nav__container--img" src="./src/img/arrow.png" alt="arrow">
@@ -40,23 +40,23 @@
                 <a class="nav__container--a" href="">Acción</a>
             </div>
         </div>
-    </nav> -->
-
-    <nav class="navArrow inactive">
-        <img class="navArrow__back" src="./src/img/arrow2.png" alt="arrowBack">
-        <p class="navArrow__gender inactive">Acción</p>
     </nav>
 
-    <!-- <section class="section">
+    <nav class="navArrow inactive">
+        <img id="navArrowBack" class="navArrow__back" src="./src/img/arrow2.png" alt="arrowBack">
+        <p class="navArrow__gender">Acción</p>
+    </nav>
+
+    <section class="section">
         <div class="section__container">
             <div class="section__container--subtitle">
                 <h2 class="section__container--h2">Estrenos:</h2>
             </div>
             <div class="section__container--see">
-                <a class="section__container--ver" href="">Ver más</a>
+                <p id="estrenos" class="section__container--ver" href="">Ver más</p>
             </div>
-            <div id="estrenos" class="section__container--peliculas">
-                <div class="section__container--movie"></div>
+            <div id="sectionEstrenos" class="section__container--peliculas">
+                <!-- <div class="section__container--movie"></div> -->
             </div>
         </div>
 
@@ -65,15 +65,15 @@
                 <h2 class="section__container--h2">Tendencias:</h2>
             </div>
             <div class="section__container--see">
-                <a class="section__container--ver" href="">Ver más</a>
+                <p id="tendencia" class="section__container--ver" href="">Ver más</p>
             </div>
-            <div id="tendencia" class="section__container--peliculas">
-                <div class="section__container--movie"></div>
+            <div id="sectionTendencias" class="section__container--peliculas">
+                <!-- <div class="section__container--movie"></div> -->
             </div>
         </div>
-    </section> -->
+    </section>
 
-    <!-- <section class="section2">
+    <section class="section2">
         <div class="section2__container">
             <div class="section2__container--imagen">
                 <img class="section2__container--imag" src="./src/img/spiderman.jpg" alt="" />
@@ -109,19 +109,10 @@
                 <div class="section2__container--similares"></div>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <section class="section3">
         <div class="section3__container">
-            <img class="section3__container--img" src="./src/img/spiderman.jpg" alt="">
-            <img class="section3__container--img" src="./src/img/spiderman.jpg" alt="">
-            <img class="section3__container--img" src="./src/img/spiderman.jpg" alt="">
-            <img class="section3__container--img" src="./src/img/spiderman.jpg" alt="">
-            <img class="section3__container--img" src="./src/img/spiderman.jpg" alt="">
-            <img class="section3__container--img" src="./src/img/spiderman.jpg" alt="">
-            <img class="section3__container--img" src="./src/img/spiderman.jpg" alt="">
-            <img class="section3__container--img" src="./src/img/spiderman.jpg" alt="">
-            <img class="section3__container--img" src="./src/img/spiderman.jpg" alt="">
             <img class="section3__container--img" src="./src/img/spiderman.jpg" alt="">
             <img class="section3__container--img" src="./src/img/spiderman.jpg" alt="">
             <img class="section3__container--img" src="./src/img/spiderman.jpg" alt="">
@@ -140,6 +131,7 @@
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+<script src="./src/node.js"></script>
 <script src="./src/index.js"></script>
 <script src="./src/navigation.js"></script>
 </html>

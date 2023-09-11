@@ -1,3 +1,22 @@
+headerLabelInput.addEventListener('keydown', (tecla) => {
+    console.log(tecla);
+    if(tecla.keyCode === 13){
+        location.hash = 'category=';
+    };
+})
+
+estrenos.addEventListener('click', () => {
+    location.hash = '#estrenos';
+});
+
+tendencia.addEventListener('click', () => {
+    location.hash = '#trends';
+})
+
+navArrowBack.addEventListener('click', () => {
+    location.hash = '#home';
+});
+
 /*--> Después de leer el cuaderno en la parte de onhashchange */
 window.addEventListener('DOMContentLoaded', navigator, false);/*Este evento se ejecuta
 cada vez que cargue la aplicacion*/
@@ -11,6 +30,8 @@ aplicacion y cada vez que cambie el hash.*/
     if(location.hash.startsWith('#trends')){/*Metodo startsWith: si empieza
     de cierta forma, por ejemplo si comienza por "#trends" */
         homeTrends();
+    }else if(location.hash.startsWith('#estrenos')){
+        homeEstrenos();
     }else if(location.hash.startsWith('#search=')){/*Seccion de busqueda
     después del igual va a salir el texto que estemos buscando */
         homeSearch();
@@ -29,6 +50,13 @@ aplicacion y cada vez que cambie el hash.*/
 
 function homePage(){
     console.log('home!!');
+
+    nav.classList.remove('inactive');
+    navArrow.classList.add('inactive');
+    section.classList.remove('inactive');
+    section2.classList.add('inactive');
+    section3.classList.add('inactive');
+
     getTrendingMovie();
     getCategories();
     getMovieNext();
@@ -36,12 +64,50 @@ function homePage(){
 
 function homeTrends(){
     console.log('Trends!!');
+
+    nav.classList.add('inactive');
+    navArrow.classList.remove('inactive');
+    section.classList.add('inactive');
+    section2.classList.add('inactive');
+    section3.classList.remove('inactive');
+}
+
+function homeEstrenos(){
+    console.log('Estrenos!!');
+
+    nav.classList.add('inactive');
+    navArrow.classList.remove('inactive');
+    section.classList.add('inactive');
+    section2.classList.add('inactive');
+    section3.classList.remove('inactive');
 }
 
 function homeSearch(){
     console.log('Search!!');
+
+    nav.classList.add('inactive');
+    navArrow.classList.remove('inactive');
+    section.classList.add('inactive');
+    section2.classList.add('inactive');
+    section3.classList.remove('inactive');
+}
+
+function homeMovie(){
+    console.log('Movie!!');
+
+    nav.classList.add('inactive');
+    navArrow.classList.remove('inactive');
+    section.classList.add('inactive');
+    section2.classList.remove('inactive');
+    section3.classList.add('inactive');
 }
 
 function homeCategory(){
     console.log('categories!!');
+
+    nav.classList.add('inactive');
+    navArrow.classList.remove('inactive');
+    section.classList.add('inactive');
+    section2.classList.add('inactive');
+    section3.classList.remove('inactive');
 }

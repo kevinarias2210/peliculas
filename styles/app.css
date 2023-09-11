@@ -116,9 +116,10 @@
   color: #17C4EB;
 }
 
-/* .inactive{
-    display: none;
-} */
+.inactive {
+  display: none;
+}
+
 .section, .section2 {
   width: 100%;
   margin-top: 20px;
@@ -174,7 +175,7 @@
   margin-bottom: 25px;
 }
 .section2__container .section2__container--imagen .section2__container--imag {
-  width: 370px;
+  width: 384px;
   height: 370px;
   -o-object-fit: cover;
      object-fit: cover;

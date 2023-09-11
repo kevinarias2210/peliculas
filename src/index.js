@@ -10,8 +10,6 @@ const API = axios.create({
     },
 });
 
-const movieEstrenos = document.querySelector('#estrenos');
-const movieContainer = document.querySelector('#tendencia');
 const navContainer = document.querySelector('#nav');
 
 async function getMovieNext(){
@@ -25,7 +23,7 @@ async function getMovieNext(){
         movieNextImg.setAttribute('src', 'https://image.tmdb.org/t/p/w300/' + next.poster_path);
         movieNextImg.setAttribute('alt', next.title);
 
-        movieEstrenos.appendChild(movieNextImg);
+        sectionEstrenos.appendChild(movieNextImg);
     })
 }
 
@@ -43,7 +41,7 @@ async function getTrendingMovie(){
         movieImg.setAttribute('src', 'https://image.tmdb.org/t/p/w300/' + movies.poster_path);
         movieImg.setAttribute('alt', movies.title);
 
-        movieContainer.appendChild(movieImg);
+        sectionTendencias.appendChild(movieImg);
     });
 }
 
@@ -79,4 +77,3 @@ function listCategories(){
 }
 
 categories.addEventListener('click', listCategories);
-
