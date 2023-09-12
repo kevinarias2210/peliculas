@@ -116,6 +116,8 @@ async function getMovieDetails(id){
     const { data: movie } = await API('movie/' + id); /*lo que se hace en el
     data es cambiar el nombre de data a movie*/
 
+    navArrowGender.textContent = movie.title;
+
     section2ContainerImag.setAttribute('src', 'https://image.tmdb.org/t/p/w300/' + movie.poster_path);
     section2ContainerTitulo.textContent = movie.title;
     section2ContainerSipnosis.textContent = movie.overview;
