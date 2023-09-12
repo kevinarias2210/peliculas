@@ -120,6 +120,11 @@ function homeMovie(){
     section.classList.add('inactive');
     section2.classList.remove('inactive');
     section3.classList.add('inactive');
+
+    //['#movie, id']
+    const [_, movieId] = location.hash.split('=');
+    
+    getMovieDetails(movieId);
 }
 
 function homeCategory(){

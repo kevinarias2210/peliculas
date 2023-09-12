@@ -23,6 +23,10 @@ function createMovies(movies, container, clases){
         movieNextImg.setAttribute('src', 'https://image.tmdb.org/t/p/w300/' + next.poster_path);
         movieNextImg.setAttribute('alt', next.title);
 
+        movieNextImg.addEventListener('click', () => {
+            location.hash = '#movie=' + next.id;
+        });
+
         container.appendChild(movieNextImg);
     })
 }
@@ -106,6 +110,22 @@ async function getTrendingMoviePage(){
     const movies = data.results;
 
     createMovies(movies, section3Container, 'section3__container--img');
+}
+
+async function getMovieDetails(id){
+    const { data: movie } = await API('movie/' + id); /*lo que se hace en el
+    data es cambiar el nombre de data a movie*/
+
+    section2ContainerImag.setAttribute('src', 'https://image.tmdb.org/t/p/w300/' + movie.poster_path);
+    section2ContainerTitulo.textContent = movie.title;
+    section2ContainerSipnosis.textContent = movie.overview;
+    section2ContainerPoint.textContent = movie.vote_average;
+
+    createCategories(movie.genres, section2ContainerCategorias, 'section2__container--p');
+
+    /* const movies = data.results;
+
+    createMovies(movies, section3Container, 'section3__container--img'); */
 }
 
 const categories = document.querySelector('.nav__container');

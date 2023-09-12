@@ -27,6 +27,11 @@ const sectionTendencias = document.querySelector('#sectionTendencias');
 /*Section2 También tiene clases repetidas*/
 
 const section2 = document.querySelector('.section2');
+const section2ContainerImag = document.querySelector('.section2__container--imag');
+const section2ContainerTitulo = document.querySelector('.section2__container--titulo');
+const section2ContainerSipnosis = document.querySelector('.section2__container--sipnosis');
+const section2ContainerPoint = document.querySelector('.section2__container--point');
+const section2ContainerCategorias = document.querySelector('.section2__container--categorias');
 
 /*Section3 */
 
