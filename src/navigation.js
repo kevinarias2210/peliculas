@@ -1,7 +1,7 @@
-headerLabelInput.addEventListener('keydown', (tecla) => {
-    console.log(tecla);
-    if(tecla.keyCode === 13){
-        location.hash = 'category=';
+headerLabelInput.addEventListener('keydown', (event) => {
+    
+    if(event.keyCode === 13){
+        location.hash = 'search=' + headerLabelInput.value;
     };
 })
 
@@ -92,9 +92,15 @@ function homeSearch(){
 
     nav.classList.add('inactive');
     navArrow.classList.remove('inactive');
+    navArrowGender.classList.add('inactive');
     section.classList.add('inactive');
     section2.classList.add('inactive');
     section3.classList.remove('inactive');
+
+    //['#search, resultado de busqueda']
+    const [_, query] = location.hash.split('=');
+
+    getMovieSearch(query);
 }
 
 function homeMovie(){

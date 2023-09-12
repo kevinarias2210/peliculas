@@ -79,6 +79,19 @@ async function getMoviesCategories(id){
     createMovies(movies, section3Container, 'section3__container--img');
 }
 
+async function getMovieSearch(query){
+    const { data } = await API('search/movie', {
+        params: {
+            query,
+        }
+    });
+
+    console.log(query);
+    const movies = data.results;
+
+    createMovies(movies, section3Container, 'section3__container--img');
+}
+
 const categories = document.querySelector('.nav__container');
 
 function listCategories(){
