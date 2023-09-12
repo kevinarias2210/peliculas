@@ -92,6 +92,22 @@ async function getMovieSearch(query){
     createMovies(movies, section3Container, 'section3__container--img');
 }
 
+async function getMovieNextPage(){
+    const { data } = await API('movie/upcoming');
+
+    const movies = data.results;
+
+    createMovies(movies, section3Container, 'section3__container--img');
+}
+
+async function getTrendingMoviePage(){
+    const { data } = await API('trending/movie/day');
+
+    const movies = data.results;
+
+    createMovies(movies, section3Container, 'section3__container--img');
+}
+
 const categories = document.querySelector('.nav__container');
 
 function listCategories(){

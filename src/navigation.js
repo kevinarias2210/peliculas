@@ -14,7 +14,9 @@ tendencia.addEventListener('click', () => {
 })
 
 navArrowBack.addEventListener('click', () => {
-    location.hash = '#home';
+    history.back();/*history es una funcion y back es un metodo con esto
+    guarda el historial de busqueda*/
+    /* location.hash = '#home'; */
 });
 
 /*--> Después de leer el cuaderno en la parte de onhashchange */
@@ -75,6 +77,9 @@ function homeTrends(){
     section.classList.add('inactive');
     section2.classList.add('inactive');
     section3.classList.remove('inactive');
+
+    navArrowGender.innerHTML = 'Trending';
+    getTrendingMoviePage();
 }
 
 function homeEstrenos(){
@@ -85,6 +90,10 @@ function homeEstrenos(){
     section.classList.add('inactive');
     section2.classList.add('inactive');
     section3.classList.remove('inactive');
+
+    navArrowGender.innerHTML = 'New';
+
+    getMovieNextPage()
 }
 
 function homeSearch(){
