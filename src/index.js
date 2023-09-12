@@ -12,60 +12,59 @@ const API = axios.create({
 
 const navContainer = document.querySelector('#nav');
 
-async function getMovieNext(){
-    const { data } = await API('movie/upcoming');
-
-    const movieNext = data.results;
-
-    sectionEstrenos.innerHTML = '';/**Se llama al padre donde contiene todo lo que recorre para 
-    eliminarlo cuando se pide de nuevo y no cargue otra vez */
+function createMovies(movies, container, clases){
+    container.innerHTML = '';/**Se llama al padre nodo donde contiene 
+    todo lo que recorre para eliminarlo cuando se pide de nuevo y no 
+    cargue otra vez */
     
-    movieNext.map(next => {
+    movies.map(next => {
         const movieNextImg = document.createElement('img');
-        movieNextImg.classList.add('section__container--movie');
+        movieNextImg.classList.add(clases);
         movieNextImg.setAttribute('src', 'https://image.tmdb.org/t/p/w300/' + next.poster_path);
         movieNextImg.setAttribute('alt', next.title);
 
-        sectionEstrenos.appendChild(movieNextImg);
+        container.appendChild(movieNextImg);
     })
 }
 
-async function getTrendingMovie(){
-    const { data } = await API('trending/movie/day');
+function createCategories(categorias, container, clase){
+    container.innerHTML = '';
 
-    const movie = data.results;
-
-    sectionTendencias.innerHTML = '';
-    
-    movie.forEach(movies => {
-        /* console.log(movies); */
-        const movieImg = document.createElement('img');
-        movieImg.classList.add('section__container--movie');
-        movieImg.setAttribute('src', 'https://image.tmdb.org/t/p/w300/' + movies.poster_path);
-        movieImg.setAttribute('alt', movies.title);
-
-        sectionTendencias.appendChild(movieImg);
-    });
-}
-
-async function getCategories(){
-    const { data } = await API('genre/movie/list');
-
-    const categories = data.genres;
-    
-    navegator.innerHTML = '';
-
-    categories.map(cate => {
+    categorias.map(cate => {
         const enlaceCategories = document.createElement('p');
-        enlaceCategories.classList.add('nav__container--a');
+        enlaceCategories.classList.add(clase);
         enlaceCategories.innerText = cate.name;
         enlaceCategories.setAttribute('href', '');
 
         enlaceCategories.addEventListener('click', () => {
             location.hash = `category=${cate.id}/${cate.name}`;
         });
-        navContainer.appendChild(enlaceCategories);
+        container.appendChild(enlaceCategories);
     })
+}
+
+async function getMovieNext(){
+    const { data } = await API('movie/upcoming');
+
+    const movies = data.results;
+
+    createMovies(movies, sectionEstrenos, 'section__container--movie');
+}
+
+async function getTrendingMovie(){
+    const { data } = await API('trending/movie/day');
+
+    const movies = data.results;
+
+    createMovies(movies, sectionTendencias, 'section__container--movie');
+}
+
+async function getCategories(){
+    const { data } = await API('genre/movie/list');
+
+    const categorias = data.genres;
+
+    createCategories(categorias, navegator, 'nav__container--a');
 }
 
 async function getMoviesCategories(id){
@@ -75,19 +74,9 @@ async function getMoviesCategories(id){
         }
     });
 
-    const getMovieC = data.results;
+    const movies = data.results;
 
-    section3Container.innerHTML = '';
-    
-    getMovieC.forEach(getM => {
-        /* console.log(movies); */
-        const movieImg = document.createElement('img');
-        movieImg.classList.add('section3__container--img');
-        movieImg.setAttribute('src', 'https://image.tmdb.org/t/p/w300/' + getM.poster_path);
-        movieImg.setAttribute('alt', getM.title);
-
-        section3Container.appendChild(movieImg);
-    });
+    createMovies(movies, section3Container, 'section3__container--img');
 }
 
 const categories = document.querySelector('.nav__container');

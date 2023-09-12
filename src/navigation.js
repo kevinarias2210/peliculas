@@ -46,6 +46,11 @@ aplicacion y cada vez que cambie el hash.*/
     }else{/*Si ninguno funciona, solo se regresa al home */
         homePage();
     }
+
+    /*Con el scrollTop manipulamos el scroll siendo igual a los pixeles que
+    le digamos y está en el navigator para que cada navegación tome el valor */
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
 }
 
 function homePage(){
