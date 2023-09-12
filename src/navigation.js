@@ -110,4 +110,12 @@ function homeCategory(){
     section.classList.add('inactive');
     section2.classList.add('inactive');
     section3.classList.remove('inactive');
+
+    //['#category, id-name']
+    const [_, categoryData] = location.hash.split('=');
+    const [categoryId, categoryName] = categoryData.split('/');
+
+    navArrowGender.innerText = categoryName;
+
+    getMoviesCategories(categoryId);
 }

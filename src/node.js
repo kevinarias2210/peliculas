@@ -14,6 +14,7 @@ const navegator = document.querySelector('#nav');
 
 const navArrow = document.querySelector('.navArrow');
 const navArrowBack = document.querySelector('#navArrowBack');
+const navArrowGender = document.querySelector('.navArrow__gender');
 
 /*Section1 La parte de tendencias tiene las clases repetidas*/
 
@@ -30,3 +31,4 @@ const section2 = document.querySelector('.section2');
 /*Section3 */
 
 const section3 = document.querySelector('.section3');
+const section3Container = document.querySelector('.section3__container');

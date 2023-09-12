@@ -83,6 +83,7 @@
   font-family: "Overpass", sans-serif;
   font-weight: 100;
   color: white;
+  text-decoration: underline;
 }
 .nav__container .nav__container--list .nav__container--a:hover {
   font-family: "Overpass", sans-serif;

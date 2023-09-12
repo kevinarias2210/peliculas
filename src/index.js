@@ -56,13 +56,38 @@ async function getCategories(){
     navegator.innerHTML = '';
 
     categories.map(cate => {
-        const enlaceCategories = document.createElement('a');
+        const enlaceCategories = document.createElement('p');
         enlaceCategories.classList.add('nav__container--a');
         enlaceCategories.innerText = cate.name;
         enlaceCategories.setAttribute('href', '');
 
+        enlaceCategories.addEventListener('click', () => {
+            location.hash = `category=${cate.id}/${cate.name}`;
+        });
         navContainer.appendChild(enlaceCategories);
     })
+}
+
+async function getMoviesCategories(id){
+    const { data } = await API('discover/movie', {
+        params: {
+            with_genres: id,
+        }
+    });
+
+    const getMovieC = data.results;
+
+    section3Container.innerHTML = '';
+    
+    getMovieC.forEach(getM => {
+        /* console.log(movies); */
+        const movieImg = document.createElement('img');
+        movieImg.classList.add('section3__container--img');
+        movieImg.setAttribute('src', 'https://image.tmdb.org/t/p/w300/' + getM.poster_path);
+        movieImg.setAttribute('alt', getM.title);
+
+        section3Container.appendChild(movieImg);
+    });
 }
 
 const categories = document.querySelector('.nav__container');
