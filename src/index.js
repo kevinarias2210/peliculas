@@ -125,9 +125,15 @@ async function getMovieDetails(id){
 
     createCategories(movie.genres, section2ContainerCategorias, 'section2__container--p');
 
-    /* const movies = data.results;
+    getRelatedMovie(id);
+}
 
-    createMovies(movies, section3Container, 'section3__container--img'); */
+async function getRelatedMovie(id){
+    const { data } = await API(`movie/${id}/recommendations`);
+
+    const relatedMovie = data.results;
+
+    createMovies(relatedMovie, section2ContainerSimiCate, 'section2__container--simiPeli')
 }
 
 const categories = document.querySelector('.nav__container');

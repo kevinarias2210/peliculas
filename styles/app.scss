@@ -258,6 +258,32 @@
                 }
             }
         }
+
+        .section2__container--similar{
+            @extend .section2__container--subtitulo;
+
+            .section2__container--simiSubtitle{
+                @extend .section2__container--Subtitle;
+
+                .section2__container--simiH2{
+                    @extend .section2__container--h2;
+                }
+            }
+
+            .section2__container--simiCate{
+                max-height: 300px;
+                display: flex;
+                margin: 15px 0;
+                column-gap: 5px;
+                overflow-x: scroll;
+
+                .section2__container--simiPeli{
+                    min-width: 190px;
+                    height: 270px;
+                    background-color: aqua;
+                }
+            }
+        }
     }
 }
 

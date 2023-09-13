@@ -196,34 +196,47 @@
   font-family: "Overpass", sans-serif;
   font-weight: 200;
 }
-.section2__container .section2__container--subtitulo .section2__container--Subtitle {
+.section2__container .section2__container--subtitulo .section2__container--Subtitle, .section2__container .section2__container--similar .section2__container--Subtitle, .section2__container .section2__container--similar .section2__container--simiSubtitle {
   border-bottom: 5px solid #EBD717;
 }
-.section2__container .section2__container--subtitulo .section2__container--Subtitle .section2__container--h2 {
+.section2__container .section2__container--subtitulo .section2__container--Subtitle .section2__container--h2, .section2__container .section2__container--similar .section2__container--Subtitle .section2__container--h2, .section2__container .section2__container--similar .section2__container--simiSubtitle .section2__container--h2, .section2__container .section2__container--similar .section2__container--simiSubtitle .section2__container--simiH2 {
   padding-bottom: 5px;
   font-family: "Cabin", sans-serif;
   font-size: 18px;
   color: #17C4EB;
 }
-.section2__container .section2__container--subtitulo .section2__container--puntos, .section2__container .section2__container--subtitulo .section2__container--categorias {
+.section2__container .section2__container--subtitulo .section2__container--puntos, .section2__container .section2__container--similar .section2__container--puntos, .section2__container .section2__container--subtitulo .section2__container--categorias, .section2__container .section2__container--similar .section2__container--categorias {
   margin-top: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.section2__container .section2__container--subtitulo .section2__container--puntos .section2__container--star, .section2__container .section2__container--subtitulo .section2__container--categorias .section2__container--star {
+.section2__container .section2__container--subtitulo .section2__container--puntos .section2__container--star, .section2__container .section2__container--similar .section2__container--puntos .section2__container--star, .section2__container .section2__container--subtitulo .section2__container--categorias .section2__container--star, .section2__container .section2__container--similar .section2__container--categorias .section2__container--star {
   width: 40px;
 }
-.section2__container .section2__container--subtitulo .section2__container--puntos .section2__container--point, .section2__container .section2__container--subtitulo .section2__container--categorias .section2__container--point {
+.section2__container .section2__container--subtitulo .section2__container--puntos .section2__container--point, .section2__container .section2__container--similar .section2__container--puntos .section2__container--point, .section2__container .section2__container--subtitulo .section2__container--categorias .section2__container--point, .section2__container .section2__container--similar .section2__container--categorias .section2__container--point {
   font-family: "Cabin", sans-serif;
   font-size: 30px;
   font-weight: 600;
   color: #EB1768;
 }
-.section2__container .section2__container--subtitulo .section2__container--categorias .section2__container--p {
+.section2__container .section2__container--subtitulo .section2__container--categorias .section2__container--p, .section2__container .section2__container--similar .section2__container--categorias .section2__container--p {
   margin: 0 10px 10px 0;
   font-family: "Overpass", sans-serif;
   font-style: italic;
+}
+.section2__container .section2__container--similar .section2__container--simiCate {
+  max-height: 300px;
+  display: flex;
+  margin: 15px 0;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  overflow-x: scroll;
+}
+.section2__container .section2__container--similar .section2__container--simiCate .section2__container--simiPeli {
+  min-width: 190px;
+  height: 270px;
+  background-color: aqua;
 }
 
 .section3 {

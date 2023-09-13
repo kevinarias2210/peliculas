@@ -32,7 +32,7 @@ const section2ContainerTitulo = document.querySelector('.section2__container--ti
 const section2ContainerSipnosis = document.querySelector('.section2__container--sipnosis');
 const section2ContainerPoint = document.querySelector('.section2__container--point');
 const section2ContainerCategorias = document.querySelector('.section2__container--categorias');
-
+const section2ContainerSimiCate = document.querySelector('.section2__container--simiCate');
 /*Section3 */
 
 const section3 = document.querySelector('.section3');
