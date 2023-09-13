@@ -1,1 +1,1 @@
-{"version":3,"sources":["generales.scss","generales.css"],"names":[],"mappings":"AAAA;EACI,SAAA;EACA,UAAA;EACA,uBAAA;ACCJ","file":"generales.css"}
+{"version":3,"sources":["mediaQuerys.scss","generales.css","generales.scss"],"names":[],"mappings":"AAAA;EAGQ;IACI,aAAA;IACA,uBAAA;ECDV;EDsJM;IACI,uBAAA;ECpJV;AACF;ACNA;EACI,SAAA;EACA,UAAA;EACA,uBAAA;ADQJ","file":"generales.css"}

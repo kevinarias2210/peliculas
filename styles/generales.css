@@ -1,3 +1,12 @@
+@media screen and (min-width: 600px) {
+  .header__img {
+    display: flex;
+    justify-content: center;
+  }
+  .section3 .section3__container {
+    justify-content: center;
+  }
+}
 * {
   margin: 0;
   padding: 0;
