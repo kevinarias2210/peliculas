@@ -13,53 +13,59 @@
   box-sizing: content-box;
 }
 
-.header, .nav, .header__label {
+.header, .header .header__container .header__label {
   width: 100%;
+}
+.header .header__container, .header .header__container .header__label .header__container {
   display: flex;
   align-items: center;
 }
-.header__img {
+.header .header__container .header__img {
   width: 25%;
   margin: 15px;
 }
-.header__img .header__img--logo {
+.header .header__container .header__img .header__img--logo {
   width: 100px;
   height: 100px;
 }
-.header__label {
+.header .header__container .header__label {
   width: 75%;
-  height: 14vh;
+  height: 28vh;
+  display: flex;
   justify-content: center;
+  align-items: center;
   background-color: #EB1768;
 }
-.header__label .header__label--input {
+.header .header__container .header__label .header__label--input {
   width: 50%;
   padding: 8px;
   border: none;
   border-radius: 5px;
   outline: none;
 }
-.header__label .header__label--input::-moz-placeholder {
+.header .header__container .header__label .header__label--input::-moz-placeholder {
   font-family: "Overpass", sans-serif;
   font-weight: 100;
   color: #BCBCBC;
   text-align: center;
 }
-.header__label .header__label--input::placeholder {
+.header .header__container .header__label .header__label--input::placeholder {
   font-family: "Overpass", sans-serif;
   font-weight: 100;
   color: #BCBCBC;
   text-align: center;
 }
-.header__label .header__label--m {
+.header .header__container .header__label .header__label--m {
   margin: 12px;
 }
-.header__label .header__label--m .header__m--menu {
+.header .header__container .header__label .header__label--m .header__m--menu {
   width: 30px;
   height: 33px;
 }
 
 .nav {
+  width: 100%;
+  display: flex;
   justify-content: flex-end;
   margin-top: 20px;
 }
@@ -110,6 +116,7 @@
 }
 
 .navArrow {
+  width: 98%;
   display: flex;
   align-items: center;
   margin-top: 8px;
@@ -310,11 +317,11 @@
 }
 
 @media screen and (max-width: 640px) {
-  .header__img {
+  .header .header__container .header__img {
     display: flex;
     justify-content: center;
   }
-  .header__label {
+  .header .header__container .header__label {
     height: 28vh;
     justify-content: space-around;
   }
@@ -337,11 +344,11 @@
   }
 }
 @media screen and (max-width: 360px) {
-  .header__img {
+  .header .header__container .header__img {
     display: flex;
     justify-content: center;
   }
-  .header__label {
+  .header .header__container .header__label {
     height: 15vh;
   }
   .section__container .section__container--see .section__container--ver {
@@ -362,5 +369,77 @@
   }
   .footer .footer__logo .footer__logo--icon {
     width: 75%;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .header, .header .header__container .header__label {
+    display: flex;
+    justify-content: center;
+  }
+  .header .header__container, .header .header__container .header__label .header__container {
+    width: 80%;
+  }
+  .header .header__container .header__img {
+    width: 9%;
+  }
+  .header .header__container .header__label {
+    width: 88%;
+    height: 13vh;
+    justify-content: space-evenly;
+  }
+  .nav {
+    width: 40%;
+    margin: 0 50%;
+  }
+  .nav__container {
+    margin-right: 0;
+  }
+  .nav__container .nav__container--list {
+    margin-top: 0;
+  }
+  .navArrow {
+    width: 34.3%;
+    margin: 0 10%;
+  }
+  .section__container {
+    width: 81%;
+    margin-left: 9%;
+  }
+  .section__container .section__container--subtitle {
+    margin-left: 20px;
+    margin-right: 0px;
+  }
+  .section__container .section__container--peliculas {
+    margin-left: 22px;
+    margin-right: 0;
+  }
+  .section2 .section2__container .section2__container--imagen .section2__container--imag {
+    height: 530px;
+  }
+  .section2 .section2__container .section2__container--details {
+    width: 83%;
+    margin: 0 9%;
+  }
+  .section2 .section2__container .section2__container--subtitulo, .section2 .section2__container .section2__container--similar {
+    width: 83%;
+    margin: 0 9%;
+  }
+  .section3 .section3__container {
+    width: 90%;
+    margin-left: 70px;
+    margin-right: 70px;
+    grid-template-columns: repeat(5, 180px);
+  }
+  .footer {
+    justify-content: center;
+  }
+  .footer .footer__container {
+    width: 68%;
+  }
+  .footer .footer__logo {
+    width: 10%;
+  }
+  .footer .footer__logo .footer__logo--icon {
+    width: 65%;
   }
 }/*# sourceMappingURL=app.css.map */

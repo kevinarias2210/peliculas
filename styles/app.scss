@@ -1,57 +1,61 @@
 @import './generales.scss';
 
 .header{
-    width: 100%;
-    display: flex;
-    align-items: center;
-
-    &__img{
-        width: 25%;
-        margin: 15px;
-        
-        .header__img--logo{
-            width: 100px;
-            height: 100px;
-        }
-    }
-    
-    &__label{
-        width: 75%;
-        height: 14vh;
-        justify-content: center;
-        background-color: $color-primary;
-        @extend .header;
-        
-        .header__label--input{
-            width: 50%;
-            padding: 8px;
-            border: none;
-            border-radius: 5px;
-            outline: none;
-        }
-        
-        .header__label--input::placeholder{
-            font-family: $font-parrafo;
-            font-weight: 100;
-            color: $grey;
-            text-align: center;
-        }
-        
-        .header__label--m{
-            margin: 12px;
+    width: 100%;    
+    .header__container{
+        display: flex;
+        align-items: center;
+        .header__img{
+            width: 25%;
+            margin: 15px;
             
-            .header__m--menu{
-                width: 30px;
-                height: 33px;
+            .header__img--logo{
+                width: 100px;
+                height: 100px;
+            }
+        }
+        
+        .header__label{
+            width: 75%;
+            height: 28vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $color-primary;
+            @extend .header;
+            
+            .header__label--input{
+                width: 50%;
+                padding: 8px;
+                border: none;
+                border-radius: 5px;
+                outline: none;
+            }
+            
+            .header__label--input::placeholder{
+                font-family: $font-parrafo;
+                font-weight: 100;
+                color: $grey;
+                text-align: center;
+            }
+            
+            .header__label--m{
+                margin: 12px;
+                
+                .header__m--menu{
+                    width: 30px;
+                    height: 33px;
+                }
             }
         }
     }
 }
 
 .nav{
+    width: 100%;
+    display: flex;
     justify-content: flex-end;
     margin-top: 20px;
-    @extend .header;
     
     &__container{
         margin-right: $margin-right-left;
@@ -105,6 +109,7 @@
 }
 
 .navArrow{
+    width: 98%;
     display: flex;
     align-items: center;
     margin-top: 8px;
@@ -355,15 +360,17 @@
 
 @media screen and (max-width: 640px) {
     .header{
+        .header__container{
+            .header__img{
+                display: flex;
+                justify-content: center;
+            }
+            
+            .header__label{
+                height: 28vh;
+                justify-content: space-around;
+            }
 
-        &__img{
-            display: flex;
-            justify-content: center;
-        }
-        
-        &__label{
-            height: 28vh;
-            justify-content: space-around;
         }
     }
 
@@ -403,12 +410,14 @@
 
 @media screen and (max-width: 360px) {
     .header{
-        &__img{
-            display: flex;
-            justify-content: center;
-        }
-        &__label{
-            height: 15vh;
+        .header__container{
+            .header__img{
+                display: flex;
+                justify-content: center;
+            }
+            .header__label{
+                height: 15vh;
+            }
         }
     }
 
@@ -445,6 +454,97 @@
             
             .footer__logo--icon{
                 width: 75%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .header{
+        display: flex;
+        justify-content: center;
+        .header__container{
+            width: 80%;
+            .header__img{
+                width: 9%;
+            }
+            .header__label{
+                width: 88%;
+                height: 13vh;
+                justify-content: space-evenly;
+            }
+        }
+    }
+
+    .nav{
+        width: 40%;
+        margin: 0 50%;
+        &__container{
+            margin-right: 0;
+            .nav__container--list{
+                margin-top: 0;
+            }
+        }
+    }
+
+    .navArrow{
+        width: 34.3%;
+        margin: 0 10%;
+    }
+
+    .section{
+        &__container{
+            width: 81%;
+            margin-left: 9%;
+            .section__container--subtitle{
+                margin-left: 20px;
+                margin-right: 0px;
+            }
+            .section__container--peliculas{
+                margin-left: 22px;
+                margin-right: 0;
+            }
+        }
+    }
+
+    .section2{
+        .section2__container{
+            .section2__container--imagen{
+                .section2__container--imag{
+                    height: 530px;
+                }
+            }
+            .section2__container--details{
+                width: 83%;
+                margin: 0 9%;
+            }
+            .section2__container--subtitulo{
+                width: 83%;
+                margin: 0 9%;
+            }
+        }
+    }
+
+    .section3{
+        .section3__container{
+            width: 90%;
+            margin-left: 70px;
+            margin-right: 70px;
+            grid-template-columns: repeat(5, 180px);
+        }
+    }
+
+    .footer{
+        justify-content: center;
+        .footer__container {
+            width: 68%;
+        }
+
+        .footer__logo{
+            width: 10%;
+            
+            .footer__logo--icon{
+                width: 65%;
             }
         }
     }
