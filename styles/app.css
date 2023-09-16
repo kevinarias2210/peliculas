@@ -185,7 +185,7 @@
   line-height: 110px;
 }
 
-.section__container--load, .section3 .section3__container .section__container--load4, .section2__container .section2__container--similar .section2__container--simiCate .section__container--load2, .section2__container .section2__container--imagen .section__container--load3 {
+.section__container--load, .section3 .section3__container .section__container--load4, .section2__container .section2__container--similar .section2__container--simiCate .section__container--load2, .section2__container .section2__container--details .section2__container--title .section2__container--carga, .section2__container .section2__container--imagen .section__container--load3 {
   min-width: 200px;
   height: 300px;
   background-color: rgba(128, 128, 128, 0.133);
@@ -235,6 +235,10 @@
 .section2__container .section2__container--details .section2__container--title .section2__container--titulo {
   font-family: "Cabin", sans-serif;
   font-size: 25px;
+}
+.section2__container .section2__container--details .section2__container--title .section2__container--carga {
+  width: 100px;
+  height: 50px;
 }
 .section2__container .section2__container--details .section2__container--description .section2__container--sipnosis {
   font-family: "Overpass", sans-serif;

@@ -246,6 +246,11 @@
                     font-family: $font-subtitle;
                     font-size: 25px;
                 }
+                .section2__container--carga{
+                    width: 100px;
+                    height: 50px;
+                    @extend .section__container--load;
+                }
             }
 
             .section2__container--description{
