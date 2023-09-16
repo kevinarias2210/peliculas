@@ -131,9 +131,10 @@ async function getMovieDetails(id){
 async function getRelatedMovie(id){
     const { data } = await API(`movie/${id}/recommendations`);
 
+    
     const relatedMovie = data.results;
-
-    createMovies(relatedMovie, section2ContainerSimiCate, 'section2__container--simiPeli')
+    
+    createMovies(relatedMovie, section2ContainerSimiCate, 'section2__container--simiPeli');
 }
 
 const categories = document.querySelector('.nav__container');

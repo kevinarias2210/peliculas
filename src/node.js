@@ -23,6 +23,7 @@ const estrenos = document.querySelector('#estrenos');
 const tendencia = document.querySelector('#tendencia');
 const sectionEstrenos = document.querySelector('#sectionEstrenos');
 const sectionTendencias = document.querySelector('#sectionTendencias');
+/* const sectionContainerLoad = document.querySelector('.section__container--load'); */
 
 /*Section2 También tiene clases repetidas*/
 
@@ -33,6 +34,7 @@ const section2ContainerSipnosis = document.querySelector('.section2__container--
 const section2ContainerPoint = document.querySelector('.section2__container--point');
 const section2ContainerCategorias = document.querySelector('.section2__container--categorias');
 const section2ContainerSimiCate = document.querySelector('.section2__container--simiCate');
+
 /*Section3 */
 
 const section3 = document.querySelector('.section3');
