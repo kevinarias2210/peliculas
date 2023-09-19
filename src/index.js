@@ -12,7 +12,28 @@ const API = axios.create({
 
 const navContainer = document.querySelector('#nav');
 
-function createMovies(movies, container, clases){
+/* let options = {
+    padre: document.querySelector('#sectionContainer'),
+    rootMargin: "0px",
+    umbral: 1.0
+}; */
+
+/*Se trae al objeto constructor IntersectionObserver, se guarda en un 
+parametro las entradas que tienen sus propia propiedades, cuando se recorre
+el elemento accede a una propiedad isIntersecting que está en false, para
+saber si está en el viewport, entonces si está en el viewport, el elemento
+obtiene el atributo data-img que guarda el src de la imagen*/
+
+let observer = new IntersectionObserver((entries)=> {
+    entries.forEach((element)=>{
+        if(element.isIntersecting){
+            const url = element.target.getAttribute('data-img');
+            element.target.setAttribute('src', url);
+        };
+    })
+});
+
+function createMovies(movies, container, clases,){
     container.innerHTML = '';/**Se llama al padre nodo donde contiene 
     todo lo que recorre para eliminarlo cuando se pide de nuevo y no 
     cargue otra vez */
@@ -20,12 +41,19 @@ function createMovies(movies, container, clases){
     movies.map(next => {
         const movieNextImg = document.createElement('img');
         movieNextImg.classList.add(clases);
-        movieNextImg.setAttribute('src', 'https://image.tmdb.org/t/p/w300/' + next.poster_path);
+        movieNextImg.setAttribute('data-img', 'https://image.tmdb.org/t/p/w300/' + next.poster_path);
         movieNextImg.setAttribute('alt', next.title);
 
         movieNextImg.addEventListener('click', () => {
             location.hash = '#movie=' + next.id;
         });
+
+        /*Traemos la variable del constructor, con el metodo observe para
+        seleccionar cual elemento se está observando para el viewport*/
+
+        if(observer){
+            observer.observe(movieNextImg);
+        }
 
         container.appendChild(movieNextImg);
     })
