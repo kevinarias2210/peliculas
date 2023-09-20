@@ -44,6 +44,10 @@ function createMovies(movies, container, clases,){
         movieNextImg.setAttribute('data-img', 'https://image.tmdb.org/t/p/w300/' + next.poster_path);
         movieNextImg.setAttribute('alt', next.title);
 
+        movieNextImg.addEventListener('error', () => {
+            movieNextImg.setAttribute('src', 'https://farmaciaschilespa.cl/wp-content/uploads/2022/08/Imagen-no-disponible-1-300x300.jpg');
+        })
+
         movieNextImg.addEventListener('click', () => {
             location.hash = '#movie=' + next.id;
         });
@@ -51,9 +55,9 @@ function createMovies(movies, container, clases,){
         /*Traemos la variable del constructor, con el metodo observe para
         seleccionar cual elemento se está observando para el viewport*/
 
-        if(observer){
-            observer.observe(movieNextImg);
-        }
+        observer.observe(movieNextImg);
+        /* if(observer){
+        } */
 
         container.appendChild(movieNextImg);
     })
