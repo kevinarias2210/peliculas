@@ -138,29 +138,19 @@ async function getMovieNextPage(){
     const { data } = await API('movie/upcoming');
 
     const movies = data.results;
+    maxPage = data.total_pages;//limitamos la paginación
 
     createMovies(movies, section3Container, 'section3__container--img');
-
-    /*Desde acá se empieza a implementar la paginación de la API */
-
-    /* const btnLoadMore = document.createElement('button');
-    btnLoadMore.innerText = 'Cargar más';
-    btnLoadMore.addEventListener('click', getPaginatedMovieNext);
-    section3Container.appendChild(btnLoadMore); */
 }
-
-/* let page = 1; */
-
-//-->
-
-/* window.addEventListener('scroll', getPaginatedMovieNext); */
 
 async function getPaginatedMovieNext(){
     const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
 
     const scrollIsBottom = (scrollTop + clientHeight) >= (scrollHeight - 15);
 
-    if(scrollIsBottom){
+    const pageIsNotMax = page < maxPage;
+    
+    if(scrollIsBottom && pageIsNotMax){
         page++;
         const { data } = await API('movie/upcoming', {
             params: {
@@ -173,12 +163,6 @@ async function getPaginatedMovieNext(){
         createMovies(movies, section3Container, 'section3__container--img', false);
 
     }
-
-
-    /* const btnLoadMore = document.createElement('button');
-    btnLoadMore.innerText = 'Cargar más';
-    btnLoadMore.addEventListener('click', getPaginatedMovieNext);
-    section3Container.appendChild(btnLoadMore); */
 }
 
 async function getTrendingMoviePage(){

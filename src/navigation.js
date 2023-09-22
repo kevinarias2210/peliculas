@@ -1,5 +1,6 @@
 //La paginacion va ha ser lo primero que cargue
 let page = 1;
+let maxPage;
 let infitiScroll;/*Esta variable se creo para hacer una funcion dinamica y
 ser llamada donde se va a utilizar el infinite scroll */
 
@@ -49,7 +50,7 @@ aplicacion y cada vez que cambie el hash.*/
     if(location.hash.startsWith('#trends')){/*Metodo startsWith: si empieza
     de cierta forma, por ejemplo si comienza por "#trends" */
         homeTrends();
-        infitiScroll = getPaginatedMovieNext;
+        /* infitiScroll = getPaginatedMovieNext; */
 
     }else if(location.hash.startsWith('#estrenos')){
         homeEstrenos();
@@ -58,7 +59,7 @@ aplicacion y cada vez que cambie el hash.*/
     }else if(location.hash.startsWith('#search=')){/*Seccion de busqueda
     después del igual va a salir el texto que estemos buscando */
         homeSearch();
-        infitiScroll = getPaginatedMovieNext;
+        /* infitiScroll = getPaginatedMovieNext; */
 
     }else if(location.hash.startsWith('#movie=')){/*Despues del igual nos de
     el id de la pelicula, para que ese id lo podamos utilizar para la 
