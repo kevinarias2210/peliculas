@@ -50,7 +50,7 @@ aplicacion y cada vez que cambie el hash.*/
     if(location.hash.startsWith('#trends')){/*Metodo startsWith: si empieza
     de cierta forma, por ejemplo si comienza por "#trends" */
         homeTrends();
-        /* infitiScroll = getPaginatedMovieNext; */
+        infitiScroll = getPaginatedMovieNext;
 
     }else if(location.hash.startsWith('#estrenos')){
         homeEstrenos();
@@ -59,7 +59,7 @@ aplicacion y cada vez que cambie el hash.*/
     }else if(location.hash.startsWith('#search=')){/*Seccion de busqueda
     después del igual va a salir el texto que estemos buscando */
         homeSearch();
-        /* infitiScroll = getPaginatedMovieNext; */
+        /* infitiScroll = getPaginatedMovieSearch(query); */
 
     }else if(location.hash.startsWith('#movie=')){/*Despues del igual nos de
     el id de la pelicula, para que ese id lo podamos utilizar para la 
@@ -142,6 +142,8 @@ function homeSearch(){
     const [_, query] = location.hash.split('=');
 
     getMovieSearch(query);
+
+    infitiScroll = getPaginatedMovieSearch(query);
 }
 
 function homeMovie(){
@@ -175,4 +177,6 @@ function homeCategory(){
     navArrowGender.innerText = categoryName;
 
     getMoviesCategories(categoryId);
+
+    infitiScroll = getPaginatedMovieCategories(categoryId);
 }
