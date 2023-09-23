@@ -10,6 +10,38 @@ const API = axios.create({
     },
 });
 
+function likedMovieList(){
+    const item = JSON.parse(localStorage.getItem('liked_movies'));
+    let movies;
+
+    /*Si item tiene algo, entonces movies tendra eso y si no es un objeto
+    vacio*/
+    if(item){
+        movies = item;
+    }else{
+        movies = {};
+    }
+
+    return movies;
+}
+
+//Informacion que se guarda en el localStorage
+
+function likeMovie(movie){
+    /*Identificamos si guardamos o no en el localStorage */
+    const likedMovies = likedMovieList();
+
+    /*Le preguntamos si tiene algo guardado en el objeto que tenga el id 
+    movie */
+    if(likedMovies[movie.id]){
+        likedMovies[movie.id] = undefined;
+    }else{
+        likedMovies[movie.id] = movie;
+    }
+
+    localStorage.setItem('liked_movies' ,JSON.stringify(likedMovies));
+}
+
 const navContainer = document.querySelector('#nav');
 
 /* let options = {
@@ -66,6 +98,8 @@ function createMovies(movies, container, clases, clean = true){
         movieBotton.classList.add('buttonFav');
         movieBotton.addEventListener('click', () => {
             movieBotton.classList.toggle('buttonFav__liked');
+            likeMovie(next);/*Funcion para guardalo en el localStorage
+            y el parametro guarda todo el recorrido que se hizo con el .map*/
         });
 
         /*Traemos la variable del constructor, con el metodo observe para
