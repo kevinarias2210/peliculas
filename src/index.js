@@ -45,17 +45,27 @@ function createMovies(movies, container, clases, clean = true){
     };
     
     movies.map(next => {
+
+        const contenedor = document.createElement('div');
+        contenedor.classList.add('containerImgBtn');
+
         const movieNextImg = document.createElement('img');
         movieNextImg.classList.add(clases);
         movieNextImg.setAttribute('data-img', 'https://image.tmdb.org/t/p/w300/' + next.poster_path);
         movieNextImg.setAttribute('alt', next.title);
 
+        movieNextImg.addEventListener('click', () => {
+            location.hash = '#movie=' + next.id;
+        });
+        
         movieNextImg.addEventListener('error', () => {
             movieNextImg.setAttribute('src', 'https://farmaciaschilespa.cl/wp-content/uploads/2022/08/Imagen-no-disponible-1-300x300.jpg');
         })
 
-        movieNextImg.addEventListener('click', () => {
-            location.hash = '#movie=' + next.id;
+        const movieBotton = document.createElement('button');
+        movieBotton.classList.add('buttonFav');
+        movieBotton.addEventListener('click', () => {
+            movieBotton.classList.toggle('buttonFav__liked');
         });
 
         /*Traemos la variable del constructor, con el metodo observe para
@@ -65,7 +75,11 @@ function createMovies(movies, container, clases, clean = true){
         /* if(observer){
         } */
 
-        container.appendChild(movieNextImg);
+        container.appendChild(contenedor);
+        contenedor.appendChild(movieNextImg);
+        contenedor.appendChild(movieBotton);
+        /* container.appendChild(movieNextImg);
+        container.appendChild(movieBotton); */
     })
 }
 

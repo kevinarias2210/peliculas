@@ -177,6 +177,10 @@
             display: flex ;
             overflow-x: scroll;
             column-gap: 15px;
+
+            .containerImgBtn{
+                position: relative;
+            }
             
             .section__container--movie{
                 min-width: 200px;
@@ -184,6 +188,32 @@
                 line-height: 110px;
             }
 
+            .buttonFav{
+                width: 35px;
+                height: 35px;
+                margin: 0;
+                padding: 0;
+                border: none;
+                border-radius: 50%;
+                position: absolute;
+                top: 10px;
+                left: 156px;
+                background-color: $color-primary;
+            }
+
+            .buttonFav::before{
+                content: '🤍';
+                font-size: 20px;
+            }
+
+            .buttonFav__liked{
+                background-color: white;
+            }
+
+            .buttonFav__liked::before{
+                content: '💜';
+                font-size: 20px;
+            }
         }
     }
 }
@@ -360,12 +390,44 @@
         grid-template-rows: auto;
         column-gap: 5px;
         row-gap: 10px;
+
+        .containerImgBtn{
+            position: relative;
+        }
         
         .section3__container--img{
             width: 180px;
             height: 277px;
             object-fit: cover;
         }
+
+        .buttonFav{
+            width: 35px;
+            height: 35px;
+            margin: 0;
+            padding: 0;
+            border: none;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            left: 140px;
+            background-color: $color-primary;
+        }
+
+        .buttonFav::before{
+            content: '🤍';
+            font-size: 20px;
+        }
+
+        .buttonFav__liked{
+            background-color: white;
+        }
+
+        .buttonFav__liked::before{
+            content: '💜';
+            font-size: 20px;
+        }
+
         .section__container--load4{
             width: 180px;
             height: 277px;
@@ -542,6 +604,7 @@
             margin-right: 0;
             .nav__container--list{
                 margin-top: 0;
+                z-index: 1;
             }
         }
     }

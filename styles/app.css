@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @media screen and (min-width: 600px) {
   .header__img {
     display: flex;
@@ -179,10 +180,36 @@
   -moz-column-gap: 15px;
        column-gap: 15px;
 }
+.section__container .section__container--peliculas .containerImgBtn {
+  position: relative;
+}
 .section__container .section__container--peliculas .section__container--movie {
   min-width: 200px;
   height: 300px;
   line-height: 110px;
+}
+.section__container .section__container--peliculas .buttonFav {
+  width: 35px;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 156px;
+  background-color: #EB1768;
+}
+.section__container .section__container--peliculas .buttonFav::before {
+  content: "🤍";
+  font-size: 20px;
+}
+.section__container .section__container--peliculas .buttonFav__liked {
+  background-color: white;
+}
+.section__container .section__container--peliculas .buttonFav__liked::before {
+  content: "💜";
+  font-size: 20px;
 }
 
 .section__container--load, .section3 .section3__container .section__container--load4, .section2__container .section2__container--similar .section2__container--simiCate .section__container--load2, .section2__container .section2__container--details .section2__container--title .section2__container--carga, .section2__container .section2__container--imagen .section__container--load3 {
@@ -317,11 +344,37 @@
        column-gap: 5px;
   row-gap: 10px;
 }
+.section3 .section3__container .containerImgBtn {
+  position: relative;
+}
 .section3 .section3__container .section3__container--img {
   width: 180px;
   height: 277px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.section3 .section3__container .buttonFav {
+  width: 35px;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 140px;
+  background-color: #EB1768;
+}
+.section3 .section3__container .buttonFav::before {
+  content: "🤍";
+  font-size: 20px;
+}
+.section3 .section3__container .buttonFav__liked {
+  background-color: white;
+}
+.section3 .section3__container .buttonFav__liked::before {
+  content: "💜";
+  font-size: 20px;
 }
 .section3 .section3__container .section__container--load4 {
   width: 180px;
@@ -446,6 +499,7 @@
   }
   .nav__container .nav__container--list {
     margin-top: 0;
+    z-index: 1;
   }
   .navArrow {
     width: 34.3%;
