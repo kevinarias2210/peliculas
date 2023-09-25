@@ -211,6 +211,10 @@
   content: "💜";
   font-size: 20px;
 }
+.section__container .section__container--peliculas .section__container--like {
+  min-width: 200px;
+  height: 300px;
+}
 
 .section__container--load, .section3 .section3__container .section__container--load4, .section2__container .section2__container--similar .section2__container--simiCate .section__container--load2, .section2__container .section2__container--details .section2__container--title .section2__container--carga, .section2__container .section2__container--imagen .section__container--load3 {
   min-width: 200px;

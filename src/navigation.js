@@ -99,6 +99,7 @@ function homePage(){
     getTrendingMovie();
     getCategories();
     getMovieNext();
+    getLikedMovies();//funcion donde llamamos a los objetos del LocalStorage en el home
 }
 
 function homeTrends(){

@@ -23,9 +23,7 @@ const estrenos = document.querySelector('#estrenos');
 const tendencia = document.querySelector('#tendencia');
 const sectionEstrenos = document.querySelector('#sectionEstrenos');
 const sectionTendencias = document.querySelector('#sectionTendencias');
-/* const sectionContainerMovie = document.querySelector('.section__container--movie');
-sectionContainerMovie.setAttribute("id", 'imgHijos'); */
-/* const sectionContainerLoad = document.querySelector('.section__container--load'); */
+const sectionLikesContainer = document.querySelector('#sectionFavoritas');
 
 /*Section2 También tiene clases repetidas*/
 

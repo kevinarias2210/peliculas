@@ -32,11 +32,11 @@ function likeMovie(movie){
     const likedMovies = likedMovieList();
 
     /*Le preguntamos si tiene algo guardado en el objeto que tenga el id 
-    movie */
+    movie. El "movie.id" es de la API */
     if(likedMovies[movie.id]){
-        likedMovies[movie.id] = undefined;
+        likedMovies[movie.id] = undefined;//Si ya existia la pelicula la eliminamos
     }else{
-        likedMovies[movie.id] = movie;
+        likedMovies[movie.id] = movie;//si no agregarla
     }
 
     localStorage.setItem('liked_movies' ,JSON.stringify(likedMovies));
@@ -96,6 +96,9 @@ function createMovies(movies, container, clases, clean = true){
 
         const movieBotton = document.createElement('button');
         movieBotton.classList.add('buttonFav');
+        /*Si el objeto guardado en LocalStorage tiene una pelicula con id YY 
+        le agrego la clase*/
+        likedMovieList()[next.id] && movieBotton.classList.add('buttonFav__liked');
         movieBotton.addEventListener('click', () => {
             movieBotton.classList.toggle('buttonFav__liked');
             likeMovie(next);/*Funcion para guardalo en el localStorage
@@ -315,3 +318,18 @@ function listCategories(){
 }
 
 categories.addEventListener('click', listCategories);
+
+function getLikedMovies(){
+    const likedMovies = likedMovieList();
+
+    const moviesArray = Object.values(likedMovies)/*Este metodo nos crea un 
+    array con todos los valores de un objeto ejemplo:*/
+    //{keys: 'value', keys: 'value',} a
+    //'value', 'value',]
+
+    console.log(moviesArray);
+
+    //Llamamos a la funcion donde se crea todas las peliculas
+    createMovies(moviesArray, sectionLikesContainer, 'section__container--like', clean = true);
+    
+}
