@@ -94,6 +94,7 @@
   position: absolute;
   top: 160px;
   background-color: rgba(235, 23, 104, 0.8117647059);
+  z-index: 1;
 }
 .nav__container .nav__container--list .nav__container--a {
   padding: 5px 15px 0 10px;
