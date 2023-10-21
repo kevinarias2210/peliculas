@@ -425,7 +425,16 @@
 }
 
 /*Medida de celulares*/
-@media screen and (min-width: 281px) and (max-width: 400px) {
+@media screen and (min-width: 281px) and (max-width: 500px) {
+  .header .header__container .header__label {
+    height: 10vh;
+  }
+  .header .header__container .header__label .header__label--input::-moz-placeholder {
+    font-size: 12px;
+  }
+  .header .header__container .header__label .header__label--input::placeholder {
+    font-size: 12px;
+  }
   .section3 .section3__container {
     justify-content: center;
   }
@@ -433,6 +442,231 @@
     font-size: 12px;
   }
 }
+/* @media screen and (min-width: 501px) and (max-width: 800px){
+    .header{   
+        .header__container{
+            .header__img{
+
+                .header__img--logo{
+                }
+            }
+
+            .header__label{
+                height: 10vh;
+                .header__label--input{
+                }
+
+                .header__label--input::placeholder{
+                    font-size: 12px;
+                }
+
+                .header__label--m{
+
+                    .header__m--menu{
+                    }
+                }
+            }
+        }
+    }
+
+    .nav{
+
+        &__container{
+
+            .nav__container--ul{
+            }
+
+            .nav__container--list{
+
+                .nav__container--a{
+                }
+                .nav__container--a:hover{
+                }
+            }
+
+            .active{
+            }
+
+            .nav__container--img{
+            }
+        }
+    }
+
+    .navArrow{
+
+        .navArrow__back{
+        }
+
+        .navArrow__gender{
+        }
+    }
+
+    .inactive{
+    }
+
+    .section{
+
+        &__container{
+
+            .section__container--subtitle{
+
+                .section__container--h2{
+                }
+            }
+
+            .section__container--see{
+
+                .section__container--ver{
+                }
+
+                .section__container--ver:hover{
+                }
+            }
+
+            .section__container--peliculas{
+
+                .containerImgBtn{
+                }
+
+                .section__container--movie{
+                }
+
+                .buttonFav{
+                }
+
+                .buttonFav::before{
+                }
+
+                .buttonFav__liked{
+                }
+
+                .buttonFav__liked::before{
+                }
+                .section__container--like{
+                }
+            }
+        }
+    }
+
+    .section__container--load{
+    }
+
+    .section2{
+
+        &__container{
+
+            .section2__container--imagen{
+
+                .section2__container--imag{
+                }
+
+                .section__container--load3{
+                }
+            }
+
+            .section2__container--details{
+
+                .section2__container--title{
+
+                    .section2__container--titulo{
+                    }
+                    .section2__container--carga{
+                    }
+                }
+
+                .section2__container--description{
+                    .section2__container--sipnosis{
+                    }
+                }
+            }
+
+            .section2__container--subtitulo{
+                .section2__container--Subtitle{
+
+                    .section2__container--h2{
+                    }
+                }
+                .section2__container--puntos{
+
+                    .section2__container--star{
+                    }
+
+                    .section2__container--point{
+                    }
+                }
+
+                .section2__container--categorias{
+
+                    .section2__container--p{ 
+                    }
+                }
+            }
+
+            .section2__container--similar{
+
+                .section2__container--simiSubtitle{
+
+                    .section2__container--simiH2{
+                    }
+                }
+
+                .section2__container--simiCate{
+                    .section2__container--simiPeli{
+                    }
+
+                    .section__container--load2{
+                    }
+
+                }
+            }
+        }
+    }
+
+    .section3{
+
+        .section3__container{
+
+            .containerImgBtn{
+            }
+
+            .section3__container--img{
+            }
+
+            .buttonFav{
+            }
+
+            .buttonFav::before{
+            }
+
+            .buttonFav__liked{
+            }
+
+            .buttonFav__liked::before{
+            }
+
+            .section__container--load4{
+            }
+        }
+    }
+
+    .footer{
+
+        &__container{
+
+            .footer__container--h3{
+            }
+        }
+
+        .footer__logo{
+
+            .footer__logo--p{
+            }
+
+            .footer__logo--icon{
+            }
+        }
+    }
+} */
 /*Medida de celular volteado*/
 @media screen and (min-width: 600px) and (max-width: 800px) {
   .header .header__container .header__label {
