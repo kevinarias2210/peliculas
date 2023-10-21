@@ -96,7 +96,6 @@ function createMovies(movies, container, clases, clean = true){
 
         const movieBotton = document.createElement('button');
         movieBotton.classList.add('buttonFav');
-        movieBotton.setAttribute('id', 'moviLike')
         /*Si el objeto guardado en LocalStorage tiene una pelicula con id YY 
         le agrego la clase*/
         likedMovieList()[next.id] && movieBotton.classList.add('buttonFav__liked');
