@@ -442,33 +442,40 @@
     font-size: 12px;
   }
 }
-/*Medida de Ipad Air, mini, Surface Duo y pro : Tenerlo muy pendiente, las otras pantallas están listas*/
-/* @media screen and (min-width: 768px) and (max-width: 912px){
-    .header{   
-        .header__container{
-            .header__label{
-                height: 10vh;
-                .header__label--input::placeholder{
-                    font-size: 12px;
-                }
-            }
-        }
-    }
-
-    .section3{
-        .section3__container{
-            justify-content: center;
-        }
-    }
-
-    .footer{
-        .footer__logo{
-            .footer__logo--p{
-                font-size: 12px;
-            }
-        }
-    }
-} */
+/*Medida de Surface Duo*/
+@media screen and (min-width: 540px) and (max-width: 600px) {
+  .header .header__container .header__img {
+    display: flex;
+    justify-content: center;
+  }
+  .header .header__container .header__label {
+    height: 13vh;
+  }
+  .section .section__container .section__container--see .section__container--ver, .section2 .section__container .section__container--see .section__container--ver {
+    font-size: 4vmin;
+  }
+  .section3 .section3__container {
+    grid-template-columns: repeat(3, 170px);
+  }
+  .section3 .section3__container .section3__container--img {
+    width: 170px;
+  }
+  .section3 .section3__container .buttonFav {
+    left: 126px;
+  }
+  .footer__container {
+    height: 15vh;
+  }
+  .footer__container .footer__container--h3 {
+    font-size: 22px;
+  }
+  .footer .footer__logo .footer__logo--p {
+    font-size: 18px;
+  }
+  .footer .footer__logo .footer__logo--icon {
+    width: 58%;
+  }
+}
 /*Medida de celular volteado*/
 @media screen and (min-width: 600px) and (max-width: 800px) {
   .header .header__container .header__label {
