@@ -10,14 +10,14 @@
             margin: 15px;
             
             .header__img--logo{
-                width: 100px;
+                width: 77px;
                 height: 100px;
             }
         }
         
         .header__label{
             width: 75%;
-            height: 28vh;
+            height: 15vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -26,7 +26,7 @@
             
             .header__label--input{
                 width: 50%;
-                padding: 8px;
+                padding: 10px;
                 border: none;
                 border-radius: 5px;
                 outline: none;
@@ -34,6 +34,7 @@
             
             .header__label--input::placeholder{
                 font-family: $font-parrafo;
+                font-size: 12px;
                 font-weight: 100;
                 color: $grey;
                 text-align: center;
@@ -74,17 +75,16 @@
         }
 
         .nav__container--list{
-            margin-top: 17px;
             display: flex;
             justify-content: center;
             flex-direction: column;
             position: absolute;
-            top: 160px;
+            top: 190px;
             background-color: #eb1768cf;
             z-index: 1;
 
             .nav__container--a{
-                padding: 5px 15px 0 10px;
+                padding: 8px 8px 0 8px;
                 font-family: $font-parrafo;
                 font-weight: 100;
                 color: $white;
@@ -162,7 +162,7 @@
             
             .section__container--ver{
                 font-family: $font-parrafo;
-                font-size: 3vmin;
+                font-size: 7vmin;
                 text-decoration: none;
                 color: $black;
             }
@@ -185,7 +185,7 @@
             
             .section__container--movie{
                 min-width: 200px;
-                height: 300px;
+                height: 280px;
                 line-height: 110px;
             }
 
@@ -217,7 +217,7 @@
             }
             .section__container--like{
                 min-width: 200px;
-                height: 300px;
+                height: 290px;
             }
         }
     }
@@ -391,7 +391,8 @@
         margin-top: 25px;
         margin-bottom: 25px;
         display: grid;
-        grid-template-columns: 182px 182px;
+        grid-template-columns: 247px;
+        /* grid-template-columns: 170px 170px; */
         grid-template-rows: auto;
         column-gap: 5px;
         row-gap: 10px;
@@ -401,7 +402,7 @@
         }
         
         .section3__container--img{
-            width: 180px;
+            width: 247px;
             height: 277px;
             object-fit: cover;
         }
@@ -415,7 +416,7 @@
             border-radius: 50%;
             position: absolute;
             top: 10px;
-            left: 140px;
+            left: 200px;
             background-color: $color-primary;
         }
 
@@ -456,7 +457,7 @@
         .footer__container--h3{
             width: 80%;
             font-family: $font-title;
-            font-size: $font-wSubtitle;
+            font-size: $font-wParrafo;
             color: $white;
         }
     }
@@ -472,39 +473,40 @@
         
         .footer__logo--p{
             font-family: $font-parrafo;
-            font-size: $font-wParrafo;
+            font-size: 10px;
         }
         
         .footer__logo--icon{
-            width: 55%;
+            width: 93%;
             margin: 5px;
         }
     }
 }
 
 /*Medida de celulares*/
-@media screen and (max-width: 640px) {
-    .header{
-        .header__container{
-            .header__img{
-                display: flex;
-                justify-content: center;
-            }
-            
-            .header__label{
-                height: 28vh;
-                justify-content: space-around;
-            }
-
+@media screen and (min-width: 281px) and (max-width: 400px){
+    .section3{
+        .section3__container{
+            justify-content: center;
         }
     }
+    
+    .footer{
+        .footer__logo{
+            .footer__logo--p{
+                font-size: 12px;
+            }
+        }
+    }
+}
 
-    .section{
-        &__container{
-            .section__container--see{
-                .section__container--ver{
-                    font-size: $font-wParrafo;
-                }
+/*Medida de celular volteado*/
+
+@media screen and (min-width: 600px) and (max-width: 800px){
+    .header{  
+        .header__container{
+            .header__label{
+                height: 25vh;
             }
         }
     }
@@ -512,79 +514,44 @@
     .section3{
         .section3__container{
             justify-content: center;
-            justify-items: center;
-            grid-template-columns: repeat(3, 195px);
-        }
-        .section3__container--img{
-            width: 190px;
+            grid-template-columns: repeat(3, 170px);
+            column-gap: 10px;
+
+            .section3__container--img{
+                width: 170px;
+            }
+
+            .buttonFav{
+                left: 128px;
+            }
         }
     }
-
+    
     .footer{
         &__container{
-            height: 28vh;
+            height: 30vh;
+            .footer__container--h3{
+                font-size: $font-wTitle;
+            }
         }
         
         .footer__logo{
-            .footer__logo--icon{
-                width: 45%;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 360px) {
-    .header{
-        .header__container{
-            .header__img{
-                display: flex;
-                justify-content: center;
-            }
-            .header__label{
-                height: 15vh;
-            }
-        }
-    }
-
-    .section{
-        &__container{
-            .section__container--see{
-                .section__container--ver{
-                    font-size: $font-wParrafo;
-                }
-            }
-        }
-    }
-
-    .section3{
-        .section3__container{
-            justify-content: center;
-            grid-template-columns: 150px 150px;
-
-            .section3__container--img{
-                width: 150px;
-            }
-        }
-    }
-
-    .footer{
-        .footer__container {
-            height: 15vh;
-        }
-
-        .footer__logo{
             .footer__logo--p{
-                font-size: 13px;
+                font-size: $font-wParrafo;
             }
             
             .footer__logo--icon{
-                width: 75%;
+                width: 47%;
             }
         }
     }
 }
 
-/*Medida de tablets y PC*/
+/*Medida */
+
+
+/*Medida Nest Hub, Nest Hub Max y PC*/
+
 @media screen and (min-width: 992px) and (max-width: 1280px) {
     .header{
         display: flex;
@@ -593,6 +560,9 @@
             width: 80%;
             .header__img{
                 width: 9%;
+                .header__img--logo{
+                    width: 82px;
+                }
             }
             .header__label{
                 width: 88%;
@@ -660,7 +630,7 @@
             width: 90%;
             margin-left: 70px;
             margin-right: 70px;
-            grid-template-columns: repeat(5, 180px);
+            grid-template-columns: repeat(4, 180px);
         }
     }
 
@@ -680,133 +650,7 @@
     }
 }
 
-@media screen and (min-width: 640px) and (max-width: 800px) {
-    .header{
-        .header__container{
-            .header__label{
-                height: 10vh;
-            }
-        }
-    }
-
-    .section{
-        &__container{
-            .section__container--subtitle{
-                .section__container--h2{
-                    font-size: 30px;
-                }
-            }
-        }
-    }
-
-    .section3{
-        .section3__container{
-            grid-template-columns: repeat(4, 182px);
-        }
-    }
-
-    .footer{
-        .footer__container {
-            height: 10vh;
-        }
-
-        .footer__logo{
-            .footer__logo--icon{
-                width: 37%;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 650px) and (max-width: 960px) {
-    .header{
-        .header__container{
-            .header__label{
-                height: 17vh;
-            }
-        }
-    }
-
-    .section3{
-        .section3__container{
-            grid-template-columns: repeat(4, 182px);
-        }
-    }
-
-    .footer{
-        .footer__container {
-            height: 17vh;
-        }
-
-        .footer__logo{
-            .footer__logo--icon{
-                width: 30%;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 1280px) and (max-width: 1440px) {
-    .header{
-        .header__container{
-            .header__img{
-                width: 15%;
-            }
-            .header__label{
-                width: 100%;
-                height: 11vh;
-                justify-content: space-around;
-                .header__label--input{
-                    padding: 15px;
-                    border-radius: 15px;
-                }
-                .header__label--input::placeholder{
-                    font-size: 20px;
-                }
-            }
-        }
-    }
-
-    .nav{
-        .nav__container{
-            .nav__container--ul{
-                font-size: 30px;
-            }
-            .nav__container--list{
-                margin-top: 34px;
-                .nav__container--a{
-                    font-size: 26px;
-                }
-            }
-        }
-    }
-
-    .section{
-        &__container{
-            .section__container--subtitle{
-                .section__container--h2{
-                    font-size: 30px;
-                }
-            }
-        }
-    }
-
-    .section3{
-        .section3__container{
-            grid-template-columns: repeat(7, 182px);
-        }
-    }
-
-    .footer{
-        .footer__logo{
-            .footer__logo--icon{
-                width: 30%;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 1280px) and (max-width: 1920px) {
+@media screen and (min-width: 1281px) and (max-width: 1920px) {
     .header{
         display: flex;
         justify-content: center;
@@ -814,6 +658,9 @@
             width: 80%;
             .header__img{
                 width: 9%;
+                .header__img--logo{
+                    width: 86px;
+                }
             }
             .header__label{
                 width: 88%;
@@ -880,7 +727,7 @@
             width: 90%;
             margin-left: 70px;
             margin-right: 70px;
-            grid-template-columns: repeat(5, 180px);
+            grid-template-columns: repeat(7, 180px);
         }
     }
 
@@ -891,7 +738,7 @@
         }
 
         .footer__logo{
-            width: 10%;
+            width: 6%;
             
             .footer__logo--icon{
                 width: 65%;
