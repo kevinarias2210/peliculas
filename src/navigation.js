@@ -17,7 +17,11 @@ estrenos.addEventListener('click', () => {
 
 tendencia.addEventListener('click', () => {
     location.hash = '#trends';
-})
+});
+
+/* favorite.addEventListener('click', () => {
+    location.hash = '#trends';
+}); */
 
 navArrowBack.addEventListener('click', () => {
     history.back();/*history es una funcion y back es un metodo con esto
@@ -27,7 +31,7 @@ navArrowBack.addEventListener('click', () => {
 
 /*--> Después de leer el cuaderno en la parte de onhashchange */
 window.addEventListener('DOMContentLoaded', navigator, false);/*Este evento se ejecuta
-cada vez que cargue la aplicacion*/
+cuando ya haya cargado la aplicacion*/
 window.addEventListener('hashchange', navigator, false);/*Este evento llama
 la funcion cuando cambie el hash */
 
@@ -76,7 +80,8 @@ aplicacion y cada vez que cambie el hash.*/
     }
 
     /*Con el scrollTop manipulamos el scroll siendo igual a los pixeles que
-    le digamos y está en el navigator para que cada navegación tome el valor */
+    le digamos y está en el navigator para que cada navegación tome el valor,
+    como está en 0 se ve desde el inicio */
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
 

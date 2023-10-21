@@ -24,6 +24,8 @@ const tendencia = document.querySelector('#tendencia');
 const sectionEstrenos = document.querySelector('#sectionEstrenos');
 const sectionTendencias = document.querySelector('#sectionTendencias');
 const sectionLikesContainer = document.querySelector('#sectionFavoritas');
+const sectionContainerLike = document.querySelector('.section__container--like');
+const favorite = document.querySelector('#favorite');
 
 /*Section2 También tiene clases repetidas*/
 

@@ -96,6 +96,7 @@ function createMovies(movies, container, clases, clean = true){
 
         const movieBotton = document.createElement('button');
         movieBotton.classList.add('buttonFav');
+        movieBotton.setAttribute('id', 'moviLike')
         /*Si el objeto guardado en LocalStorage tiene una pelicula con id YY 
         le agrego la clase*/
         likedMovieList()[next.id] && movieBotton.classList.add('buttonFav__liked');
@@ -103,6 +104,8 @@ function createMovies(movies, container, clases, clean = true){
             movieBotton.classList.toggle('buttonFav__liked');
             likeMovie(next);/*Funcion para guardalo en el localStorage
             y el parametro guarda todo el recorrido que se hizo con el .map*/
+            getLikedMovies();
+            
         });
 
         /*Traemos la variable del constructor, con el metodo observe para
